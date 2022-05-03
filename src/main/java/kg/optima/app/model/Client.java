@@ -1,14 +1,27 @@
 package kg.optima.app.model;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
+@Table(name = "clients")
 public class Client implements Serializable {
-
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", nullable = false)
+    private Long id;
 
     private String status;
     private String fio;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getStatus() {
         return status;
@@ -24,14 +37,6 @@ public class Client implements Serializable {
 
     public void setFio(String fio) {
         this.fio = fio;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     @Override

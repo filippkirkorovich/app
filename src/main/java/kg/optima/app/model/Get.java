@@ -4,20 +4,20 @@ import java.io.Serializable;
 
 //Dummy object for representing getAllUsers message in RabbitMQ
 public class Get implements Serializable {
-    private Integer id;
+    private Long id;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
     public Get() {
     }
 
-    public Get(Integer id) {
+    public Get(Long id) {
         this.id = id;
     }
 }

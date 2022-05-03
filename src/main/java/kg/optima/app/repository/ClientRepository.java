@@ -10,6 +10,6 @@ public interface ClientRepository {
 
     List<Client> getAllClients();
 
-    Client getClientById(int id);
+    Client getClientById(Long id);
 
 }

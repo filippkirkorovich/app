@@ -27,7 +27,7 @@ public class ClientController {
     }
 
     @GetMapping("/getClient/{id}")
-    public Client getClientById(@PathVariable("id") Integer id){
+    public Client getClientById(@PathVariable("id") Long id){
         return service.getClientById(id);
     }
 
@@ -36,5 +36,4 @@ public class ClientController {
         Client c = service.save(client);
         response.sendRedirect("/getClient/"+c.getId());
     }
-
 }

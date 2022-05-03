@@ -26,7 +26,7 @@ public class QueueClient {
         return (List<Client>)template.convertSendAndReceive(exchange.getName(), "rpc", new Get());
     }
 
-    public Client getClientById(int id){
+    public Client getClientById(Long id){
         return (Client)template.convertSendAndReceive(exchange.getName(), "rpc", new Get(id));
     }
 

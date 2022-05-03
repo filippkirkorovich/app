@@ -3,11 +3,11 @@ package kg.optima.app.service;
 import kg.optima.app.model.Client;
 import kg.optima.app.queue.QueueClient;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Component
+@Service
 public class QueueService implements ClientService{
 
     @Autowired
@@ -24,7 +24,7 @@ public class QueueService implements ClientService{
     }
 
     @Override
-    public Client getClientById(int id) {
+    public Client getClientById(Long id) {
         return queueClient.getClientById(id);
     }
 
